@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniFinder BG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero секция -->
+  <section class="hero-section" id="hero">
+    <video class="bg-video" autoplay muted loop>
+      <source src="7945769-hd_1920_1080_25fps.mp4" type="video/mp4">
+      Вашият браузър не поддържа видеото.
+    </video>
+
+    <!-- Лого -->
+    <img src="learning_academy-removebg-preview.png" alt="UniFinder BG Logo" class="hero-logo">
+
+    <!-- Меню горе вдясно -->
+    <nav class="hero-menu">
+      <a href="about.html">За нас</a>
+      <a href="reviews.html">Ревюта</a>
+      <a href="contact.html">Контакти</a>
+      <a href="universities.html">Университети</a>
+    </nav>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>Добре дошли в UniFinder BG</h1>
+      <p>Намери своя университет в България лесно и бързо</p>
+      <a href="#finder" id="startBtn" class="btn-primary">Започни сега</a>
+    </div>
+  </section>
+
+  <!-- Finder -->
+  <section id="finder" class="finder hidden">
+    <div class="form-box">
+      <div id="q1" class="question-box">
+        <h2>1️⃣ Избери град</h2>
+        <select id="city" required>
+          <option value="">-- Избери град --</option>
+          <option value="sofia">София</option>
+          <option value="plovdiv">Пловдив</option>
+          <option value="varna">Варна</option>
+          <option value="burgas">Бургас</option>
+          <option value="ruse">Русе</option>
+          <option value="velikotarnovo">Велико Търново</option>
+          <option value="blagoevgrad">Благоевград</option>
+          <option value="stzagora">Стара Загора</option>
+          <option value="svishtov">Свищов</option>
+        </select>
+      </div>
+
+      <div id="q2" class="question-box hidden">
+        <h2>2️⃣ Избери специалност</h2>
+        <select id="specialty"></select>
+      </div>
+
+      <div id="q3" class="question-box hidden">
+        <h2>3️⃣ Тип университет</h2>
+        <select id="type">
+          <option value="">-- Всички --</option>
+          <option value="state">Държавен</option>
+          <option value="private">Частен</option>
+        </select>
+      </div>
+
+      <div id="q4" class="question-box hidden">
+        <h2>4️⃣ Форма на обучение</h2>
+        <select id="form">
+          <option value="">-- Всички --</option>
+          <option value="regular">Редовна</option>
+          <option value="distance">Задочна</option>
+        </select>
+      </div>
+
+      <div id="q5" class="question-box hidden">
+        <h2>5️⃣ Такса (максимум лв/година)</h2>
+        <input type="number" id="maxFee" placeholder="напр. 3000">
+        <button id="showResults">Покажи университетите</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="results hidden">
+    <h2>Резултати</h2>
+    <div class="results-container"></div>
+    <p id="noResults" class="hidden no-results">Няма намерени резултати.</p>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close-btn">&times;</span>
+      <img id="modalImg" src="" alt="">
+      <h3 id="modalName"></h3>
+      <p id="modalType"></p>
+      <p id="modalForm"></p>
+      <p id="modalFee"></p>
+      <p id="modalDescription"></p>
+      <a id="modalVisit" href="#" target="_blank" class="modal-btn">Посети сайта</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
